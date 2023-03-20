@@ -45,16 +45,16 @@ app.get("/ratings", (req, res) => {
 
 app.get("/weather", async (req, res) => {
   res.render("weather");
-  // const dame = req.query.location
-  // if (dame) {
-  //   const weatherData = await call(dame);
-  //   res.send(weatherData?.data);
-  // } else {
-  //   res.send({
-  //     location: "Kyoto",
-  //     weather: "its a nice cool day with faling leaves all over the streets",
-  //   });
-  // }
+   const dame = req.query.location
+   if (dame) {
+     const weatherData = await call(dame);
+     res.send(weatherData?.data);
+   } else {
+     res.send({
+       location: "Kyoto",
+       weather: "its a nice cool day with faling leaves all over the streets",
+     });
+   }
 });
 app.get("*", (req, res) => {
   res.render("404");

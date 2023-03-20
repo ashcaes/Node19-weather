@@ -1,13 +1,16 @@
 {
   "name": "web-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "weather app for fetching weather data",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node app.js",
-    "dev":"--omit"
+    
   },
+  "engines": {
+  "node": ">=16"
+}
+
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -9,6 +9,7 @@ const puplic = path.join(__dirname, "../puplic");
 const viewsPath = path.join(__dirname, "./templates/views");
 
 const partialPath = path.join(__dirname, "./templates/partials");
+const port =process.env.PORT
 
 app.set("view engine", "hbs");
 
@@ -60,4 +61,4 @@ app.get("*", (req, res) => {
   res.render("404");
 });
 
-app.listen(3070, () => console.log("server started lad"));
+app.listen(port, () => console.log("server started lad"));
